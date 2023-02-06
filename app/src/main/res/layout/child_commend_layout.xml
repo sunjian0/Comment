@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="7dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/second_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/second_imgAvatar"
+            android:layout_width="@dimen/dp24"
+            android:layout_height="@dimen/dp24"
+            android:layout_marginStart="@dimen/dp74"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/second_lyCommentNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@+id/second_imgAvatar"
+            app:layout_constraintTop_toTopOf="@+id/second_imgAvatar">
+
+            <TextView
+                android:id="@+id/second_tvCommentNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp5"
+                android:text=""
+                android:textColor="@color/color_802c2c2c"
+                android:textSize="@dimen/sp12" />
+
+            <ImageView
+                android:id="@+id/second_ivLabelAuthor"
+                android:layout_width="@dimen/dp20"
+                android:layout_height="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_marginTop="@dimen/dp4"
+                android:src="@mipmap/ic_tag_author"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/second_tvCommentNickname"
+                app:layout_constraintTop_toTopOf="@+id/second_tvCommentNickname" />
+
+            <ImageView
+                android:id="@+id/second_ivLabelMy"
+                android:layout_width="@dimen/dp34"
+                android:layout_height="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_marginTop="@dimen/dp4"
+                android:src="@mipmap/ic_tag_my"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/second_tvCommentNickname"
+                app:layout_constraintTop_toTopOf="@+id/second_tvCommentNickname" />
+
+            <!--        <ImageView-->
+            <!--            android:id="@+id/second_ivTriangle"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="center_vertical"-->
+            <!--            android:layout_marginLeft="@dimen/dp7"-->
+            <!--            android:src="@mipmap/ic_more_close" />-->
+            <TextView
+                android:id="@+id/second_tvTriangle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp7"
+                android:text="▶"
+                android:textColor="@color/color_802c2c2c"
+                android:textSize="7sp" />
+
+            <TextView
+                android:id="@+id/second_tvCommentNickname2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp7"
+                android:text=""
+                android:textColor="@color/color_802c2c2c"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+
+        <!--    可折叠 可展开的 view    -->
+        <com.sun.mycommentdemo.comment.ExpandTextView
+            android:id="@+id/second_tvCommentContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp12"
+            android:textColor="@color/color_ff2c2c2c"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/second_imgAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/second_lyCommentNickname"
+            tools:text="" />
+
+        <TextView
+            android:id="@+id/second_tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp4"
+            android:text=""
+            android:textColor="@color/color_802c2c2c"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintStart_toStartOf="@+id/second_tvCommentContent"
+            app:layout_constraintTop_toBottomOf="@+id/second_tvCommentContent" />
+
+        <TextView
+            android:id="@+id/second_tvReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp43"
+            android:text="回复"
+            android:textColor="@color/color_b22c2c2c"
+            android:textSize="@dimen/sp12"
+            app:layout_constraintLeft_toRightOf="@+id/second_tvTime"
+            app:layout_constraintTop_toTopOf="@+id/second_tvTime" />
+
+        <LinearLayout
+            android:id="@+id/second_rlLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp19"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/second_tvReply"
+            app:layout_constraintTop_toTopOf="@+id/second_tvTime">
+
+            <ImageView
+                android:id="@+id/second_imageLike"
+                android:layout_width="@dimen/dp12"
+                android:layout_height="@dimen/dp13"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/dp3"
+                android:src="@drawable/ic_like_bg" />
+
+            <TextView
+                android:id="@+id/second_tvCommentLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/color_802c2c2c"
+                android:textSize="@dimen/sp12" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

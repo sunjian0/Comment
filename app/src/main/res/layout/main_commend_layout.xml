@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp8"
+    android:layout_marginBottom="@dimen/dp7">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/first_root"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <ImageView
+        android:id="@+id/first_imgAvatar"
+        android:layout_width="@dimen/dp38"
+        android:layout_height="@dimen/dp38"
+        android:layout_marginStart="@dimen/dp22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/first_tvCommentNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp14"
+        android:text=""
+        android:textColor="@color/color_802c2c2c"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintLeft_toRightOf="@+id/first_imgAvatar"
+        app:layout_constraintTop_toTopOf="@+id/first_imgAvatar" />
+
+    <ImageView
+        android:id="@+id/first_ivLabelAuthor"
+        android:layout_width="@dimen/dp20"
+        android:layout_height="@dimen/dp10"
+        android:src="@mipmap/ic_tag_author"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginTop="@dimen/dp4"
+        app:layout_constraintLeft_toRightOf="@+id/first_tvCommentNickname"
+        app:layout_constraintTop_toTopOf="@+id/first_tvCommentNickname"/>
+
+    <ImageView
+        android:id="@+id/first_ivLabelMy"
+        android:layout_width="@dimen/dp34"
+        android:layout_height="@dimen/dp10"
+        android:src="@mipmap/ic_tag_my"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/dp4"
+        android:layout_marginTop="@dimen/dp4"
+        app:layout_constraintLeft_toRightOf="@+id/first_tvCommentNickname"
+        app:layout_constraintTop_toTopOf="@+id/first_tvCommentNickname"/>
+
+    <!--    可折叠 可展开的 view    -->
+    <com.sun.mycommentdemo.comment.ExpandTextView
+        android:id="@+id/first_tvCommentContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp14"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp12"
+        android:textColor="@color/color_ff2c2c2c"
+        android:textSize="@dimen/sp14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/first_imgAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/first_tvCommentNickname"
+        tools:text="" />
+
+    <TextView
+        android:id="@+id/first_tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp4"
+        android:text=""
+        android:textColor="@color/color_802c2c2c"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintStart_toStartOf="@+id/first_tvCommentContent"
+        app:layout_constraintTop_toBottomOf="@+id/first_tvCommentContent" />
+
+    <TextView
+        android:id="@+id/first_tvReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp43"
+        android:text="回复"
+        android:textColor="@color/color_b22c2c2c"
+        android:textSize="@dimen/sp12"
+        app:layout_constraintLeft_toRightOf="@+id/first_tvTime"
+        app:layout_constraintTop_toTopOf="@+id/first_tvTime" />
+
+    <LinearLayout
+        android:id="@+id/first_rlLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp19"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/first_tvReply"
+        app:layout_constraintTop_toTopOf="@+id/first_tvTime">
+
+        <ImageView
+            android:id="@+id/first_imageLike"
+            android:layout_width="@dimen/dp12"
+            android:layout_height="@dimen/dp13"
+            android:layout_marginRight="@dimen/dp3"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_like_bg" />
+
+        <TextView
+            android:id="@+id/first_tvCommentLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textColor="@color/color_802c2c2c"
+            android:textSize="@dimen/sp12" />
+
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
