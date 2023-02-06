@@ -33,7 +33,7 @@ import java.util.List;
  * @Date 2022/12/15
  * @Description 评论列表弹窗
  *
- * 此处可以使用 BottomSheetDialog  也可以用 BottomSheetDialogFragment 根据需求 怎么方便怎么来 就行 
+ * 此处可以使用 BottomSheetDialog  也可以用 BottomSheetDialogFragment 根据需求 怎么方便怎么来 就行
  */
 public class CommendMsgDialog extends BottomSheetDialog {
 
