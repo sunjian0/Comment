@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
                 "\t\t\t\t\"beReplyNickName\":\"影响\",\n" +
                 "\t\t\t\t\"content\":\"咦\",\n" +
                 "\t\t\t\t\"id\":11371,\n" +
-                "\t\t\t\t\"isLike\":null,\n" +
+                "\t\t\t\t\"isLike\":false,\n" +
                 "\t\t\t\t\"likeCount\":0,\n" +
                 "\t\t\t\t\"ownerId\":\"1270547962099015680\",\n" +
                 "\t\t\t\t\"parentId\":11363,\n" +
@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
                 "\t\t\t\t\"beReplyNickName\":\"影响\",\n" +
                 "\t\t\t\t\"content\":\"嗯2\",\n" +
                 "\t\t\t\t\"id\":11370,\n" +
-                "\t\t\t\t\"isLike\":null,\n" +
+                "\t\t\t\t\"isLike\":false,\n" +
                 "\t\t\t\t\"likeCount\":0,\n" +
                 "\t\t\t\t\"ownerId\":\"1270547962099015680\",\n" +
                 "\t\t\t\t\"parentId\":11363,\n" +
@@ -248,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
                 "\t\t\t\t\"beReplyNickName\":\"影响\",\n" +
                 "\t\t\t\t\"content\":\"嗯\",\n" +
                 "\t\t\t\t\"id\":11369,\n" +
-                "\t\t\t\t\"isLike\":null,\n" +
+                "\t\t\t\t\"isLike\":false,\n" +
                 "\t\t\t\t\"likeCount\":0,\n" +
                 "\t\t\t\t\"ownerId\":\"1270547962099015680\",\n" +
                 "\t\t\t\t\"parentId\":11363,\n" +
